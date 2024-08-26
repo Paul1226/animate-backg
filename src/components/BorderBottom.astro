@@ -2,10 +2,12 @@
 interface Props {
     inset: number   
     colors: string
+    nameAnimation?: string
+    delay?: string
 }
 
-const {inset, colors} = Astro.props
+const {inset, colors, nameAnimation, delay} = Astro.props
 ---
 <div 
     class='absolute border-2 border-b-0 rounded-t-full' 
-    style={`border-color: ${colors}; inset:${inset}rem; bottom:0`}></div>
+    style={`border-color: ${colors}; inset:${inset}rem; bottom:0; animation: ${nameAnimation} 0.5s both cubic-bezier(0.175, 0.885, 0.32, 1.275); animation-delay: ${delay}ms;`}></div>

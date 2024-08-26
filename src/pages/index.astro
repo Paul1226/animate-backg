@@ -18,22 +18,24 @@ const distSmall = 0.5
 
 			<div class="relative bg-green- w-full">
 				<div 
-					class="w-full aspect-square max-w-[200px] absolute top-0 left-1/2 -translate-x-1/2 rounded-b-full border-2 border-black border-t-0"
+					class="w-full aspect-square max-w-[200px] absolute top-0 left-1/2 -translate-x-1/2 rounded-b-full border-2 border-black border-t-0 md:max-w-[170px]"
+					style="animation: slide 500ms both;"
 				>
-					<BorderTop inset={distBig} colors={colorBig} />
-					<BorderTop inset={distBig*2} colors={colorBig} />
-					<BorderTop inset={distBig*3} colors={colorBig} />
-					<BorderTop inset={distBig*4} colors={colorBig} />
+					<BorderTop inset={distBig} colors={colorBig} nameAnimation='slide' delay='100'/>
+					<BorderTop inset={distBig*2} colors={colorBig} nameAnimation="slide" delay='200'/>
+					<BorderTop inset={distBig*3} colors={colorBig} nameAnimation="slide" delay='300'/>
+					<BorderTop inset={distBig*4} colors={colorBig} nameAnimation="slide" delay='400'/>
 				</div>
 			</div>
 
 			<div class="relative">
 				<div 
 					class="w-full aspect-square max-w-[80px] absolute top-0 left-0 rounded-b-full border-2 border-gray-400 border-t-0"
+					style="animation: slide 500ms both;"
 				>
-					<BorderTop inset={distSmall} colors={colorSmall} />
-					<BorderTop inset={distSmall*2} colors={colorSmall} />
-					<BorderTop inset={distSmall*3} colors={colorSmall} />
+					<BorderTop inset={distSmall} colors={colorSmall} nameAnimation='slide' delay='100'/>
+					<BorderTop inset={distSmall*2} colors={colorSmall} nameAnimation="slide" delay='200'/>
+					<BorderTop inset={distSmall*3} colors={colorSmall} nameAnimation="slide" delay='300'/>
 				</div>
 			</div>
 		</div>
@@ -43,28 +45,30 @@ const distSmall = 0.5
 			<div class="relative">
 				<div 
 					class="w-full aspect-square max-w-[80px] absolute bottom-0 right-0 rounded-t-full border-2 border-gray-400 border-b-0"
+					style="animation: slide-inverse 500ms both;"
 				>
-					<BorderBottom inset={distSmall} colors={colorSmall} />
-					<BorderBottom inset={distSmall*2} colors={colorSmall} />
-					<BorderBottom inset={distSmall*3} colors={colorSmall} />
+					<BorderBottom inset={distSmall} colors={colorSmall} nameAnimation='slide-inverse' delay="100"/>
+					<BorderBottom inset={distSmall*2} colors={colorSmall} nameAnimation ="slide-inverse" delay="200" />
+					<BorderBottom inset={distSmall*3} colors={colorSmall} nameAnimation ="slide-inverse" delay="300" />
 				</div>
 			</div>
 
 			<div class="relative w-full">
 				<div 
-					class="w-full aspect-square max-w-[200px] absolute bottom-0 left-1/2 -translate-x-1/2 rounded-t-full border-2 border-black border-b-0"
+					class="w-full aspect-square max-w-[200px] absolute bottom-0 left-1/2 -translate-x-1/2 rounded-t-full border-2 border-black border-b-0 md:max-w-[150px]"
+					style="animation: slide-inverse 500ms both;"
 				>
-					<BorderBottom inset={distBig} colors={colorBig} />
-					<BorderBottom inset={distBig*2} colors={colorBig} />
-					<BorderBottom inset={distBig*3} colors={colorBig} />
-					<BorderBottom inset={distBig*4} colors={colorBig} />	
+					<BorderBottom inset={distBig} colors={colorBig} nameAnimation ='slide-inverse' delay='100' />
+					<BorderBottom inset={distBig*2} colors={colorBig} nameAnimation ='slide-inverse' delay='200' />
+					<BorderBottom inset={distBig*3} colors={colorBig} nameAnimation ='slide-inverse' delay='300' />
+					<BorderBottom inset={distBig*4} colors={colorBig} nameAnimation ='slide-inverse' delay='400' />
 				</div>
 			</div>
 		</div>
 
-		<div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center gap-2 font-light">
+		<div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center gap-2 font-light" style="animation: scale-zoom 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);">
 			<p>Porfolio</p>
-			<h1 class="text-5xl font-playfair font-semibold uppercase tracking-widest lg:text-6xl" style="transition:font-size 0.5s">PaulDev</h1>
+			<h1 class="text-5xl font-playfair font-semibold uppercase tracking-widest lg:text-6xl" style="transition:font-size 0.5s;">PaulDev</h1>
 			<span>Development</span>
 		</div>
 
@@ -90,3 +94,34 @@ const distSmall = 0.5
 		</div>
 	</Background>
 </Layout>
+
+<style>
+	@keyframes scale-zoom {
+		0%{
+			opacity: 0;
+			scale: 0;
+		}
+		100% {
+			opacity: 1;
+			scale: 1;
+		}
+	}
+
+	@keyframes slide {
+		0%{
+			translate: 0 -100%;
+		}
+		100% {
+			translate: 0 0;
+		}
+	}
+	
+	@keyframes slide-inverse {
+		0%{
+			translate: 0 100%;
+		}
+		100% {
+			translate: 0 0;
+		}
+	}
+</style>
