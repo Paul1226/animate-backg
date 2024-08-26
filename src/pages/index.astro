@@ -93,6 +93,32 @@ const distSmall = 0.5
 			</BackgroundSquare>
 		</div>
 	</Background>
+	<Background>
+		<div class="w-full h-full bg-blue-4 col-span-5 row-span-2 col-start-8 relative grid gap-x-2" style="grid-template-columns: 1fr 1.8fr;">
+
+			<div class="relative">
+				<div 
+					class="w-full aspect-square max-w-[80px] absolute top-0 right-0 rounded-b-full border-2 border-gray-400 border-t-0"
+					style="animation: slide 500ms both;"
+				>
+					<BorderTop inset={distSmall} colors={colorSmall} nameAnimation='slide' delay='100'/>
+					<BorderTop inset={distSmall*2} colors={colorSmall} nameAnimation="slide" delay='200'/>
+					<BorderTop inset={distSmall*3} colors={colorSmall} nameAnimation="slide" delay='300'/>
+				</div>
+			</div>
+			<div class="relative bg-green- w-full">
+				<div 
+					class="w-full aspect-square max-w-[200px] absolute top-0 left-1/2 -translate-x-1/2 rounded-b-full border-2 border-black border-t-0 md:max-w-[150px]"
+					style="animation: slide 500ms both;"
+				>
+					<BorderTop inset={distBig} colors={colorBig} nameAnimation='slide' delay='100'/>
+					<BorderTop inset={distBig*2} colors={colorBig} nameAnimation="slide" delay='200'/>
+					<BorderTop inset={distBig*3} colors={colorBig} nameAnimation="slide" delay='300'/>
+					<BorderTop inset={distBig*4} colors={colorBig} nameAnimation="slide" delay='400'/>
+				</div>
+			</div>
+		</div>
+	</Background>
 </Layout>
 
 <style>
