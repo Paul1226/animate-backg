@@ -17,7 +17,7 @@ const distSmall = 0.5
 
 			<div class="relative bg-green- w-full">
 				<div 
-					class="w-full h-full max-w-[250px] absolute top-0 left-1/2 -translate-x-1/2 rounded-b-full border-2 border-black border-t-0"
+					class="w-full aspect-square max-w-[200px] absolute top-0 left-1/2 -translate-x-1/2 rounded-b-full border-2 border-black border-t-0"
 				>
 					<BorderTop inset={distBig} colors={colorBig} />
 					<BorderTop inset={distBig*2} colors={colorBig} />
@@ -37,7 +37,7 @@ const distSmall = 0.5
 			</div>
 		</div>
 
-		<div class="bg-red- col-span-5 row-span-2 col-start-8 row-start-7 grid gap-x-2" style="grid-template-columns: 1fr 1.8fr">
+		<div class="bg-red col-span-5 row-span-2 col-start-8 row-start-7 grid gap-x-2" style="grid-template-columns: 1fr 1.8fr">
 
 			<div class="relative">
 				<div 
@@ -51,7 +51,7 @@ const distSmall = 0.5
 
 			<div class="relative w-full">
 				<div 
-					class="w-full h-full max-w-[250px] absolute top-0 left-1/2 -translate-x-1/2 rounded-t-full border-2 border-black border-b-0"
+					class="w-full aspect-square max-w-[200px] absolute bottom-0 left-1/2 -translate-x-1/2 rounded-t-full border-2 border-black border-b-0"
 				>
 					<BorderBottom inset={distBig} colors={colorBig} />
 					<BorderBottom inset={distBig*2} colors={colorBig} />
@@ -59,6 +59,12 @@ const distSmall = 0.5
 					<BorderBottom inset={distBig*4} colors={colorBig} />	
 				</div>
 			</div>
+		</div>
+
+		<div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center gap-2 font-light">
+			<p>Porfolio</p>
+			<h1 class="text-6xl font-playfair font-semibold uppercase tracking-widest">PaulDev</h1>
+			<span>Development</span>
 		</div>
 	</Background>
 </Layout>

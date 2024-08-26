@@ -14,6 +14,12 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.14.5(rollup@4.21.0)(typescript@5.5.4))(tailwindcss@3.4.10)
+      '@fontsource-variable/playfair-display':
+        specifier: ^5.0.26
+        version: 5.0.26
+      '@fontsource/poppins':
+        specifier: ^5.0.15
+        version: 5.0.15
       astro:
         specifier: ^4.14.5
         version: 4.14.5(rollup@4.21.0)(typescript@5.5.4)
@@ -330,6 +336,12 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/playfair-display@5.0.26':
+    resolution: {integrity: sha512-RupbW2PqBbsLbwcRBIX9fzzWr9jcovB+szNZGMRxU8V+l2VsaVhv9rm0NN/Z0gi15NtR+ipvB8apAeJJoBT1oQ==}
+
+  '@fontsource/poppins@5.0.15':
+    resolution: {integrity: sha512-hN8jhlb01v0f8F3X5h8XUiqz/dMYg/RrhyHmU1o4gZIgk+Yj2SeqmRLBj88Lh+pEjdVTmbDXSHGCVlbyPaSm8A==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2452,6 +2464,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource-variable/playfair-display@5.0.26': {}
+
+  '@fontsource/poppins@5.0.15': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
