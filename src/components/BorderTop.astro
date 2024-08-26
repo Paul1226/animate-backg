@@ -1,0 +1,12 @@
+---
+interface Props {
+    inset: number   
+    colors: string
+}
+
+const {inset, colors} = Astro.props
+---
+<div 
+    class="absolute border-2 border-t-0 rounded-b-full"
+    style={`border-color: ${colors}; inset:${inset}rem; top:0;`}
+></div>
