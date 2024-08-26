@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Background from '../components/Background.astro';
 import BorderTop from '../components/BorderTop.astro';
 import BorderBottom from '../components/BorderBottom.astro';
+import BackgroundSquare from '../components/BackgroundSquare.astro';
 
 const colorBig = '#000'
 const colorSmall = '#9ca3af'
@@ -65,6 +66,27 @@ const distSmall = 0.5
 			<p>Porfolio</p>
 			<h1 class="text-5xl font-playfair font-semibold uppercase tracking-widest lg:text-6xl" style="transition:font-size 0.5s">PaulDev</h1>
 			<span>Development</span>
+		</div>
+
+		<div class="w-full h-full col-span-6 col-start-7 row-span-4">
+			<BackgroundSquare>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-3 row-span-3 col-start-2 row-start-2"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-4 row-span-4 col-start-6 row-start-3"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-1 row-start-6"></div>
+				<div class="h-[130%] aspect-square border-2 border-gray-300 rounded-lg col-start-6 row-start-9"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-10 row-start-9"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-start-8 row-start-11"></div>
+			</BackgroundSquare>
+		</div>
+		<div class="w-full h-full col-span-6 row-span-4 col-start-1 row-start-5 rotate-180">
+			<BackgroundSquare>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-3 row-span-3 col-start-2 row-start-2"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-4 row-span-4 col-start-6 row-start-3"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-1 row-start-6"></div>
+				<div class="h-[130%] aspect-square border-2 border-gray-300 rounded-lg col-start-6 row-start-9"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-10 row-start-9"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-start-8 row-start-11"></div>
+			</BackgroundSquare>
 		</div>
 	</Background>
 </Layout>
