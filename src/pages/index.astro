@@ -66,7 +66,7 @@ const distSmall = 0.5
 			</div>
 		</div>
 
-		<div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center gap-2 font-light" style="animation: scale-zoom 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+		<div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center gap-2 font-light" style="animation: scale-zoom 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275) alternate both;">
 			<p>Porfolio</p>
 			<h1 class="text-5xl font-playfair font-semibold uppercase tracking-widest lg:text-6xl" style="transition:font-size 0.5s;">PaulDev</h1>
 			<span>Development</span>
@@ -74,28 +74,45 @@ const distSmall = 0.5
 
 		<div class="w-full h-full col-span-6 col-start-7 row-span-4">
 			<BackgroundSquare>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-3 row-span-3 col-start-2 row-start-2"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-4 row-span-4 col-start-6 row-start-3"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-1 row-start-6"></div>
-				<div class="h-[130%] aspect-square border-2 border-gray-300 rounded-lg col-start-6 row-start-9"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-10 row-start-9"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-start-8 row-start-11"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-3 row-span-3 col-start-2 row-start-2 animate-move"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-4 row-span-4 col-start-6 row-start-3 animate-move" style="animation-delay: 100mx;"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-1 row-start-6 animate-move" style="animation-delay: 200ms;"></div>
+				<div class="h-[130%] aspect-square border-2 border-gray-300 rounded-lg col-start-6 row-start-9 animate-move" style="animation-delay: 300ms;"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-10 row-start-9 animate-move" style="animation-delay: 400ms;"></div>
+				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-start-8 row-start-11 animate-move" style="animation-delay: 500ms;"></div>
 			</BackgroundSquare>
 		</div>
 		<div class="w-full h-full col-span-6 row-span-4 col-start-1 row-start-5 rotate-180">
 			<BackgroundSquare>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-3 row-span-3 col-start-2 row-start-2"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-4 row-span-4 col-start-6 row-start-3"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-1 row-start-6"></div>
-				<div class="h-[130%] aspect-square border-2 border-gray-300 rounded-lg col-start-6 row-start-9"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-10 row-start-9"></div>
-				<div class="h-full aspect-square border-2 border-gray-300 rounded-lg col-start-8 row-start-11"></div>
+				<div class="animate-move h-full aspect-square border-2 border-gray-300 rounded-lg col-span-3 row-span-3 col-start-2 row-start-2"></div>
+				<div class="animate-move h-full aspect-square border-2 border-gray-300 rounded-lg col-span-4 row-span-4 col-start-6 row-start-3" style="animation-delay: 100ms;"></div>
+				<div class="animate-move h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-1 row-start-6" style="animation-delay: 200ms;"></div>
+				<div class="animate-move h-[130%] aspect-square border-2 border-gray-300 rounded-lg col-start-6 row-start-9" style="animation-delay: 300ms;"></div>
+				<div class="animate-move h-full aspect-square border-2 border-gray-300 rounded-lg col-span-2 row-span-2 col-start-10 row-start-9" style="animation-delay: 400ms;"></div>
+				<div class="animate-move h-full aspect-square border-2 border-gray-300 rounded-lg col-start-8 row-start-11" style="animation-delay: 500ms;"></div>
 			</BackgroundSquare>
 		</div>
 	</Background>
 </Layout>
 
 <style>
+	.animate-move {
+		animation: move-smooth 3s ease-in-out infinite alternate;
+	}
+	@keyframes move-smooth {
+		25%{
+			transform: translateX(2px) translateY(2px);
+		}
+		50%{
+			transform: translateX(0) translateY(2px);
+		}
+		75%{
+			transform: translateX(2px) translateY(0);
+		}
+		100%{
+			transform: translateX(0) translateY(0);
+		}
+	}
 	@keyframes scale-zoom {
 		0%{
 			opacity: 0;
